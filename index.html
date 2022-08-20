@@ -1,0 +1,131 @@
+  <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<body background="jpg/tlo3.png">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title> Strona główna</title>
+<center><img src="jpg/logo.jpg" alt="LOGO"></center>
+
+<style type="text/css">
+#panel { 
+	display:none;
+	width:300px; 
+	height:100%; 
+	position:fixed; 
+	overflow-y:auto;
+	z-index:1001; 
+	top:0; 
+	right:-300px;
+	background-color:#f7f7f7; 
+}
+#button-hide-panel { display:none; }
+</style>
+</head>
+<body>
+<center>
+<hr>
+<a id="button-show-panel" href="#"><span style="font-size: x-large"><font color="white">Pokaż panel menu</span></a></font>
+<a id="button-hide-panel" href="#"><span style="font-size: x-large"><font color="white">Ukryj panel menu</span></a></font>
+</center>
+<div id="panel">
+	<ul>
+<img src="jpg/menu.jpg" alt="LOGO">
+<span style="font-size: x-large">
+<br><li><a href="index.html">Strona główna</a></li><br>
+<li><a href="Ankieta.html">Ankieta (02.07.2022r)</a></li><br>
+<li><a href="odrodzenie.html">Odrodzenie (20.08.2022r)</a></li><br>
+</span>
+	</ul>
+</div>
+<script>
+$(document).ready(function()
+{
+	$("#button-show-panel").click(function(){ 
+		$('#panel').show().animate({"right":"+=300px"},200);
+		$("#button-hide-panel").show();
+		$("#button-show-panel").hide();
+	});
+	$("#button-hide-panel").click(function(){ 
+		$('#panel').animate({"right":"-=300px"},200);
+		$("#button-hide-panel").hide(); 
+		$("#button-show-panel").show();
+	});	
+});
+</script>
+
+
+
+
+
+
+
+    </head>
+<body>
+<hr>
+<center><font color="red"><span style="font-size: xx-large">ANKIETA OBOWIĄZKOWA</center></font></span>
+<br>
+<br>
+<center>
+<span style="font-size: x-large">
+<font color="white">
+<form action="mailto:groupalpha959@gmail.com" method="post" enctype="text/plain"><div>
+<!-- Podstawowe pole tekstowe -->
+<p><font color="red">Podaj swoje imię</p></font>
+<input name="Imie"><br>
+<p><font color="red">Podaj swoje nazwisko</p></font>
+<input name="Nazwisko"><br>
+<!-- Pole typu RADIO -->
+<p><font color="red">Podaj swoją płeć:</p></font>
+<input type="radio" name="Plec" value="Kobieta">Kobieta
+<input type="radio" name="Plec" value="Mężczyzna">Mezczyzna
+<!-- Pole typu RADIO -->
+<p><font color="red">Ile masz lat?</p></font>
+<input type="radio" name="Wiek" value="mniej niż 15">mniej niz 15<br>
+<input type="radio" name="Wiek" value="15-19">15-19<br>
+<input type="radio" name="Wiek" value="20-29">20-29<br>
+<input type="radio" name="Wiek" value="30-39">30-39<br>
+<input type="radio" name="Wiek" value="40-60">40-60<br>
+<input type="radio" name="Wiek" value="więcej niż 60">wiecej niz 60 
+<!-- Pole typu CHECKBOX -->
+<p><font color="red">Czym się zajmujesz? (możesz zaznaczyć więcej możliwości)?</p></font>
+<input type="checkbox" name="HACK" value="DARKNET">Darknet<br>
+<input type="checkbox" name="HACK" value="UCZEN">Dopiero się ucze!<br>
+<input type="checkbox" name="HACK" value="HAKOWANIE">Hakowanie i zdobywanie np.: kont<br>
+<input type="checkbox" name="HACK" value="OPROGRAMOWANIA">Oprogramowania<br>
+<input type="checkbox" name="HACK" value="WIRUSY">Wirusy<br>
+<input type="checkbox" name="HACK" value="Inna">Inne? (podaj jakie):
+<input name="HACK">
+<!-- Lista rozwijalna (typ podstawowy) z zaznaczoną opcją domyślną -->
+<p><font color="red">Jakiej przegladarki internetowej uzywasz do celow hakerskich?</p></font>
+<select name="Przeglądarka">
+	<option selected>Chrome</option>
+	<option>Opera</option>
+	<option>Firefox</option>
+    <option>Edge</option>
+	<option>Tor</option>
+	<option>Inna</option>
+</select>
+<!-- Lista rozwijalna (typ rozszerzony) z zaznaczoną opcją domyślną i zmniejszoną wysokością -->
+<p><font color="red">Jakie znasz systemy operacyjne (mozesz wybrać kilka opcji trzymając klawisz Ctrl)?</p></font>
+<select name="System operacyjny" multiple size="3">
+	<option selected>Windows</option>
+	<option>DOS</option>
+	<option>Linux</option>
+	<option>Inny</option>
+</select>
+<!-- Pole komentarza (o powiększonych rozmiarach oraz z tekstem domyślnym) -->
+<p><font color="red">Podaj swoj komentarz:</p></font>
+<textarea name="Komentarz" cols="50" rows="10">Jeżeli masz propozycje lub chcesz przekazać mi swoje dodatkowe umiejętności napisz je tu!...</textarea>
+<br><br><br>
+<!-- Przycisk WYŚLIJ -->
+<input type="submit" value="Wyślij formularz">
+<!-- Przycisk WYCZYŚĆ DANE -->
+<input type="reset" value="Wyczyść dane">
+</div></form>
+</font>
+</span>
+</center>
+
+</body>
+</html>
